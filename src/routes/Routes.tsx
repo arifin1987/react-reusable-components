@@ -1,8 +1,8 @@
+import App from "@/App";
+import About from "@/pages/About";
+import Home from "@/pages/home";
+
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import AdminLayout from "../components/layout/AdminLayout";
 
 const router = createBrowserRouter([
   {
@@ -16,20 +16,6 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
-      },
-    ],
-  },
-  {
-    path: "/admin",
-    element: <AdminLayout />,
-    children: [
-      {
-        index: true,
-        element: <h1> This is Add Admin page</h1>,
-      },
-      {
-        path: "add-admin",
-        element: <h1> This is Add Admin page</h1>,
       },
     ],
   },
